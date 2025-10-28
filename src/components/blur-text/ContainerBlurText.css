@@ -1,0 +1,15 @@
+.container-blur-text {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/blur-text-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+
+  * {
+    font-size: 5vmax;
+    color: #fff;
+  }
+}
