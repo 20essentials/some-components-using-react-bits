@@ -1,4 +1,5 @@
 import { ContainerBlurText } from './components/blur-text/ContainerBlurText';
+import { ContainerCircularText } from './components/circular-text/ContainerCircularText';
 import { Home } from './Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -8,6 +9,11 @@ export const projects = [
     imageUrl: '/assets/blur-text.avif',
     path: '/blur-text',
     element: <ContainerBlurText />
+  },
+  {
+    imageUrl: '/assets/circular-text.avif',
+    path: '/circular-text',
+    element: <ContainerCircularText />
   }
 ];
 
