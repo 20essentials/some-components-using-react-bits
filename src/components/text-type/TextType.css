@@ -1,0 +1,31 @@
+.container-text-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-image: url('/assets/bg-text-type.avif');
+}
+
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+.am-text-type {
+  color: black;
+
+  * {
+    font-size: 8vmax;
+  }
+}
