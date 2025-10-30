@@ -1,5 +1,6 @@
 import { ContainerBlurText } from './components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from './components/circular-text/ContainerCircularText';
+import { ShuffleContainer } from './components/shuffle/ShuffleContainer';
 import { ContainerTextType } from './components/text-type/ContainerTextType';
 import { Home } from './Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -20,6 +21,11 @@ export const projects = [
     imageUrl: '/assets/type-text.avif',
     path: '/text-type',
     element: <ContainerTextType />
+  },
+  {
+    imageUrl: '/assets/shuffle-text.avif',
+    path: '/shuffle-text',
+    element: <ShuffleContainer />
   }
 ];
 
