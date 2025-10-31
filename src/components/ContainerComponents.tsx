@@ -1,4 +1,4 @@
-import { pathsAndImages } from '@/App';
+import { pathsAndImages } from '@/routes/projects';
 import '@/styles/ContainerComponents.css';
 import DomeGallery from './dome-gallery/DomeGallery';
 import { withBase } from '@/utils/functionsTs';
