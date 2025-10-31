@@ -1,5 +1,6 @@
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
+import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
@@ -37,6 +38,11 @@ export const projects = [
     imageUrl: '/assets/text-pressure.avif',
     path: '/text-pressure',
     element: <ContainerTextPressure />
+  },
+  {
+    imageUrl: '/assets/curved-loop.avif',
+    path: '/curved-loop',
+    element: <ContainerCurvedLoop />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

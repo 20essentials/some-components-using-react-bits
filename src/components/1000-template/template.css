@@ -6,14 +6,9 @@
   display: flex;
   justify-content: start;
   align-items: end;
-  padding: 1.2vmax;
-  background-image: url('/assets/shiny-text-bg.avif');
-
+  overflow: hidden;
 
   * {
     font-size: 2vmax;
-    /* color: #fff; */
   }
 }
-
-
