@@ -37,7 +37,9 @@ export const projects = [
 
 const arrayOfPaths = projects.map(obj => ({ ...obj }));
 
-const router = createBrowserRouter(arrayOfPaths);
+const router = createBrowserRouter(arrayOfPaths, {
+  basename: '/some-components-using-react-bits'
+});
 
 export const App = () => {
   return <RouterProvider router={router} />;
