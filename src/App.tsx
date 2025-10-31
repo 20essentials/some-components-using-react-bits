@@ -1,5 +1,6 @@
 import { ContainerBlurText } from './components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from './components/circular-text/ContainerCircularText';
+import { ShinyTextContainer } from './components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from './components/shuffle/ShuffleContainer';
 import { ContainerTextType } from './components/text-type/ContainerTextType';
 import { Home } from './Home';
@@ -26,6 +27,11 @@ export const projects = [
     imageUrl: '/assets/shuffle-text.avif',
     path: '/shuffle-text',
     element: <ShuffleContainer />
+  },
+  {
+    imageUrl: '/assets/shiny-text-bg-result.avif',
+    path: '/shiny-text',
+    element: <ShinyTextContainer />
   }
 ];
 
