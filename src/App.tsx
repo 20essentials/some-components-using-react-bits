@@ -35,7 +35,7 @@ export const projects = [
   },
   {
     path: '*',
-    element: <Navigate to='/' replace />
+    element: <Navigate to='/some-components-using-react-bits' replace />
   }
 ].slice(1, -1);
 
