@@ -3,8 +3,7 @@ import { ContainerCircularText } from '@/components/circular-text/ContainerCircu
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { ContainerTextType } from '@/components/text-type/ContainerTextType';
-import { Home } from '../Home';
-// import { Navigate } from 'react-router-dom';
+import { Home } from '@/Home';
 
 export const projects = [
   { imageUrl: '', path: '/', element: <Home /> },
@@ -33,8 +32,7 @@ export const projects = [
     path: '/shiny-text',
     element: <ShinyTextContainer />
   },
-  // { path: '*', element: <Navigate to='/' replace /> }
-  { imageUrl: '', path: '*', element: <Home /> },
+  { imageUrl: '', path: '*', element: <Home /> }
 ];
 
 export const pathsAndImages = projects.slice(1, -1);
