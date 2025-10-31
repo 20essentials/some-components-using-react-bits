@@ -4,8 +4,7 @@ import DomeGallery from './dome-gallery/DomeGallery';
 import { withBase } from '@/utils/functionsTs';
 
 export const ContainerComponents = () => {
-  const projects_ = projects.slice(1);
-  const arrayOfImages = projects_.map(obj => ({
+  const arrayOfImages = projects.map(obj => ({
     src: withBase(obj.imageUrl),
     web: obj.path
   }));

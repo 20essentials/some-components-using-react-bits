@@ -4,7 +4,7 @@ import { ShinyTextContainer } from './components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from './components/shuffle/ShuffleContainer';
 import { ContainerTextType } from './components/text-type/ContainerTextType';
 import { Home } from './Home';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 
 export const projects = [
   { imageUrl: '', path: '/', element: <Home /> },
@@ -32,8 +32,12 @@ export const projects = [
     imageUrl: '/assets/shiny-text-bg-result.avif',
     path: '/shiny-text',
     element: <ShinyTextContainer />
+  },
+  {
+    path: '*',
+    element: <Navigate to='/' replace />
   }
-];
+].slice(1, -1);
 
 const arrayOfPaths = projects.map(obj => ({ ...obj }));
 
