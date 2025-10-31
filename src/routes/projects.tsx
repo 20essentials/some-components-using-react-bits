@@ -2,6 +2,7 @@ import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
+import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
 import { ContainerTextType } from '@/components/text-type/ContainerTextType';
 import { Home } from '@/Home';
 
@@ -31,6 +32,11 @@ export const projects = [
     imageUrl: '/assets/shiny-text-bg-result.avif',
     path: '/shiny-text',
     element: <ShinyTextContainer />
+  },
+  {
+    imageUrl: '/assets/text-pressure.avif',
+    path: '/text-pressure',
+    element: <ContainerTextPressure />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
