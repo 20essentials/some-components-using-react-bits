@@ -1,6 +1,7 @@
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
+import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
@@ -55,6 +56,11 @@ export const projects = [
     imageUrl: '/assets/gradient-color-bg.avif',
     path: '/gradient-text',
     element: <ContainerGradientText />
+  },
+  {
+    imageUrl: '/assets/falling-text.avif',
+    path: '/falling-text',
+    element: <ContainerFallingText />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

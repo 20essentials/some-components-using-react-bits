@@ -17,6 +17,9 @@ importers:
       gsap:
         specifier: 3.13.0
         version: 3.13.0
+      matter-js:
+        specifier: ^0.20.0
+        version: 0.20.0
       motion:
         specifier: 12.23.24
         version: 12.23.24(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1101,6 +1104,9 @@ packages:
   markdown-extensions@2.0.0:
     resolution: {integrity: sha512-o5vL7aDWatOTX8LzaS1WMoaoxIiLRQJuIKKe2wAw6IeULDHaqbiqiggmx+pKvZDb1Sj+pE46Sn1T7lCqfFtg1Q==}
     engines: {node: '>=16'}
+
+  matter-js@0.20.0:
+    resolution: {integrity: sha512-iC9fYR7zVT3HppNnsFsp9XOoQdQN2tUyfaKg4CHLH8bN+j6GT4Gw7IH2rP0tflAebrHFw730RR3DkVSZRX8hwA==}
 
   mdast-util-from-markdown@2.0.2:
     resolution: {integrity: sha512-uZhTV/8NBuw0WHkPTrCqDOl0zVe1BIng5ZtHoDk49ME1qqcjYmmLmOf0gELgcRMxN4w2iuIeVso5/6QymSrgmA==}
@@ -2589,6 +2595,8 @@ snapshots:
       semver: 6.3.1
 
   markdown-extensions@2.0.0: {}
+
+  matter-js@0.20.0: {}
 
   mdast-util-from-markdown@2.0.2:
     dependencies:
