@@ -10,6 +10,7 @@ import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
 import { ContainerTextType } from '@/components/text-type/ContainerTextType';
+import { ContainerTrueFocus } from '@/components/true-focus/TrueFocusContainer';
 import { Home } from '@/Home';
 
 export const projects = [
@@ -73,6 +74,11 @@ export const projects = [
     imageUrl: '/assets/decrypted-text-bg.avif',
     path: '/decrypted-text',
     element: <DecryptedTextContainer />
+  },
+  {
+    imageUrl: '/assets/true-focus-bg.avif',
+    path: '/true-focus',
+    element: <ContainerTrueFocus />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
