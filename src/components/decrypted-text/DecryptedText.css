@@ -1,14 +1,18 @@
-.container-template {
+.DecryptedTextContainer {
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-wrap: wrap;
-  place-content: center;
+  justify-content: start;
+  align-items: end;
   overflow: hidden;
+  background-image: url('/assets/decrypted-text.avif');
+  padding: 1.5vmax;
 
   * {
     font-size: 2vmax;
+    color: #fff;
   }
 }
