@@ -1,3 +1,4 @@
+import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
@@ -85,6 +86,11 @@ export const projects = [
     imageUrl: '/assets/scroll-reveal.avif',
     path: '/scroll-reveal',
     element: <ContainerScrollReveal />
+  },
+  {
+    imageUrl: '/assets/ascii-text-bg.avif',
+    path: '/ascii-text',
+    element: <ContainerASCIIText />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
