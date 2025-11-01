@@ -6,6 +6,7 @@ import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
+import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
 import { ContainerTextType } from '@/components/text-type/ContainerTextType';
 import { Home } from '@/Home';
@@ -61,6 +62,11 @@ export const projects = [
     imageUrl: '/assets/falling-text.avif',
     path: '/falling-text',
     element: <ContainerFallingText />
+  },
+  {
+    imageUrl: '/assets/text-cursor.avif',
+    path: '/text-cursor',
+    element: <TextCursorContainer />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
