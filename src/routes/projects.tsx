@@ -5,6 +5,7 @@ import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTex
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
+import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
@@ -79,6 +80,11 @@ export const projects = [
     imageUrl: '/assets/true-focus-bg.avif',
     path: '/true-focus',
     element: <ContainerTrueFocus />
+  },
+  {
+    imageUrl: '/assets/scroll-reveal.avif',
+    path: '/scroll-reveal',
+    element: <ContainerScrollReveal />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
