@@ -14,6 +14,7 @@ import { TextCursorContainer } from '@/components/text-cursor/TextCursorContaine
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
 import { ContainerTextType } from '@/components/text-type/ContainerTextType';
 import { ContainerTrueFocus } from '@/components/true-focus/TrueFocusContainer';
+import { ContainerVariableProximity } from '@/components/variable-proximity/ContainerVariableProximity';
 import { Home } from '@/Home';
 
 export const projects = [
@@ -94,9 +95,14 @@ export const projects = [
     element: <ContainerASCIIText />
   },
   {
-    imageUrl: '/assets/.avif',
+    imageUrl: '/assets/react-bits-scroll-down.avif',
     path: '/scroll-velocity',
     element: <ContainerScrollVelocity />
+  },
+  {
+    imageUrl: '/assets/bg-proximity.avif',
+    path: '/variable-proximity',
+    element: <ContainerVariableProximity />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
