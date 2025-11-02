@@ -7,6 +7,7 @@ import { ContainerFallingText } from '@/components/falling-text/FallingTextConta
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
+import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
@@ -91,6 +92,11 @@ export const projects = [
     imageUrl: '/assets/ascii-text-bg.avif',
     path: '/ascii-text',
     element: <ContainerASCIIText />
+  },
+  {
+    imageUrl: '/assets/.avif',
+    path: '/scroll-velocity',
+    element: <ContainerScrollVelocity />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

@@ -1,0 +1,34 @@
+.container-scroll-velocity {
+  width: 100%;
+  height: 200vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  overflow: hidden;
+  background-image: url('/assets/scroll-velocity-bg.avif');
+
+  * {
+    font-size: 8vmax;
+  }
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.scroller span {
+  flex-shrink: 0;
+}
+
+
