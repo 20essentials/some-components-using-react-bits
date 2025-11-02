@@ -7,6 +7,7 @@ import { ContainerElectricBorder } from '@/components/electric-border/ContainerE
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
+import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
@@ -109,6 +110,11 @@ export const projects = [
     imageUrl: '/assets/bg-electric-border.avif',
     path: '/electric-border',
     element: <ContainerElectricBorder />
+  },
+  {
+    imageUrl: '/assets/pixel-transition-bg.avif',
+    path: '/pixel-transition',
+    element: <ContainerPixelTransition />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
