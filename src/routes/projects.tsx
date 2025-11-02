@@ -1,6 +1,7 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
+import { ContainerCubes } from '@/components/cubes/ContainerCubes';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
 import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTextContainer';
 import { ContainerElectricBorder } from '@/components/electric-border/ContainerElectricBorder';
@@ -133,6 +134,11 @@ export const projects = [
     imageUrl: '/assets/container-ghost-cursor.avif',
     path: '/ghost-cursor',
     element: <ContainerGhostCursor />
+  },
+  {
+    imageUrl: '/assets/container-cubes-bg.avif',
+    path: '/container-cubes',
+    element: <ContainerCubes />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
