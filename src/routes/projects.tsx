@@ -12,6 +12,7 @@ import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrol
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
+import { ContainerTargetCursor } from '@/components/target-cursor/ContainerTargetCursor';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
 import { ContainerTextType } from '@/components/text-type/ContainerTextType';
@@ -115,6 +116,11 @@ export const projects = [
     imageUrl: '/assets/pixel-transition-bg.avif',
     path: '/pixel-transition',
     element: <ContainerPixelTransition />
+  },
+  {
+    imageUrl: '/assets/target-cursor-background.avif',
+    path: '/target-cursor',
+    element: <ContainerTargetCursor />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
