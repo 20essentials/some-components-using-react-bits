@@ -6,6 +6,7 @@ import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTex
 import { ContainerElectricBorder } from '@/components/electric-border/ContainerElectricBorder';
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
+import { ContainerGhostCursor } from '@/components/ghost-cursor/ContainerGhostCursor';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
@@ -127,6 +128,11 @@ export const projects = [
     imageUrl: '/assets/lazer-flow-bg.avif',
     path: '/laser-flow',
     element: <ContainerLaserFlow />
+  },
+  {
+    imageUrl: '/assets/container-ghost-cursor.avif',
+    path: '/ghost-cursor',
+    element: <ContainerGhostCursor />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
