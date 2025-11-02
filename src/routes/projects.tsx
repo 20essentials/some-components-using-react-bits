@@ -3,6 +3,7 @@ import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
 import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTextContainer';
+import { ContainerElectricBorder } from '@/components/electric-border/ContainerElectricBorder';
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
@@ -103,6 +104,11 @@ export const projects = [
     imageUrl: '/assets/bg-proximity.avif',
     path: '/variable-proximity',
     element: <ContainerVariableProximity />
+  },
+  {
+    imageUrl: '/assets/bg-electric-border.avif',
+    path: '/electric-border',
+    element: <ContainerElectricBorder />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
