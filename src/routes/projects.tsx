@@ -7,6 +7,7 @@ import { ContainerElectricBorder } from '@/components/electric-border/ContainerE
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
+import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
@@ -121,6 +122,11 @@ export const projects = [
     imageUrl: '/assets/target-cursor-background.avif',
     path: '/target-cursor',
     element: <ContainerTargetCursor />
+  },
+  {
+    imageUrl: '/assets/lazer-flow-bg.avif',
+    path: '/laser-flow',
+    element: <ContainerLaserFlow />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
