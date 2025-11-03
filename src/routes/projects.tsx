@@ -15,6 +15,7 @@ import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrai
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
+import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
@@ -163,6 +164,11 @@ export const projects = [
     imageUrl: '/assets/image-trail-version-8-background.avif',
     path: '/image-trail-variant-8',
     element: <ContainerImageTrailVersion8 />
+  },
+  {
+    imageUrl: '/assets/ribbon-bg.avif',
+    path: '/ribbons',
+    element: <ContainerRibbons />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
