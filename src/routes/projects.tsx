@@ -10,6 +10,7 @@ import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGhostCursor } from '@/components/ghost-cursor/ContainerGhostCursor';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
+import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
@@ -139,6 +140,11 @@ export const projects = [
     imageUrl: '/assets/container-cubes-bg.avif',
     path: '/container-cubes',
     element: <ContainerCubes />
+  },
+  {
+    imageUrl: '/assets/noise-bg.avif',
+    path: '/noise',
+    element: <ContainerNoise />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
