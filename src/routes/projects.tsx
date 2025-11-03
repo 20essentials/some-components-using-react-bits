@@ -1,6 +1,7 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
+import { ContainerCrosshair } from '@/components/crosshair/ContainerCrosshair';
 import { ContainerCubes } from '@/components/cubes/ContainerCubes';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
 import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTextContainer';
@@ -145,6 +146,11 @@ export const projects = [
     imageUrl: '/assets/noise-bg.avif',
     path: '/noise',
     element: <ContainerNoise />
+  },
+  {
+    imageUrl: '/assets/crosshair-bg.avif',
+    path: '/crosshair',
+    element: <ContainerCrosshair />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

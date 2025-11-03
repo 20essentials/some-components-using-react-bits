@@ -1,0 +1,35 @@
+.ContainerCrosshair {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  overflow: hidden;
+  background-color: #000;
+
+  * {
+    font-size: 2vmax;
+  }
+}
+
+.crosshair-link {
+  position: relative; /* para el crosshair */
+  text-decoration: none;
+  color: #eee;
+  transition: color 0.2s;
+}
+
+.crosshair-link:hover {
+  color: #0070f3; /* cambia el color al pasar encima */
+}
+
+/* El Crosshair puede ser absolute sobre el texto si quieres */
+.crosshair-link > .Crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* para que no bloquee el hover del link */
+}
