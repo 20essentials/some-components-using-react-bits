@@ -10,6 +10,8 @@ import { ContainerFallingText } from '@/components/falling-text/FallingTextConta
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGhostCursor } from '@/components/ghost-cursor/ContainerGhostCursor';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
+import { ContainerImageTrailVersion8 } from '@/components/image-trail-variant-8/ContainerImageTrail';
+import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrail';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
@@ -151,6 +153,16 @@ export const projects = [
     imageUrl: '/assets/crosshair-bg.avif',
     path: '/crosshair',
     element: <ContainerCrosshair />
+  },
+  {
+    imageUrl: '/assets/image-trail-version-4.avif',
+    path: '/image-trail',
+    element: <ContainerImageTrail />
+  },
+  {
+    imageUrl: '/assets/image-trail-version-8-background.avif',
+    path: '/image-trail-variant-8',
+    element: <ContainerImageTrailVersion8 />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
