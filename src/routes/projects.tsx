@@ -1,3 +1,4 @@
+
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
@@ -17,6 +18,7 @@ import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
+import { ContainerScrollStack } from '@/components/scroll-stack/ContainerScrollStack';
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
@@ -175,6 +177,11 @@ export const projects = [
     imageUrl: '/assets/splash-cursor-bg.avif',
     path: '/splash-cursor',
     element: <ContainerSplashCursor />
+  },
+  {
+    imageUrl: '/assets/scrollstack-background.avif',
+    path: '/scroll-stack',
+    element: <ContainerScrollStack />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
