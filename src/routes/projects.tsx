@@ -1,6 +1,7 @@
 
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
+import { ContainerCircularGallery } from '@/components/circular-gallery/ContainerCircularGallery';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
 import { ContainerCrosshair } from '@/components/crosshair/ContainerCrosshair';
 import { ContainerCubes } from '@/components/cubes/ContainerCubes';
@@ -188,6 +189,11 @@ export const projects = [
     imageUrl: '/assets/magic-bento-background.avif',
     path: '/magic-bento',
     element: <ContainerMagicBento />
+  },
+  {
+    imageUrl: '/assets/circular-gallery-bg.avif',
+    path: '/circular-gallery',
+    element: <ContainerCircularGallery />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
