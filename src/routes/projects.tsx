@@ -20,6 +20,7 @@ import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrol
 import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerScrollVelocity';
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
+import { ContainerSplashCursor } from '@/components/splash-cursor/ContainerSplashCursor';
 import { ContainerTargetCursor } from '@/components/target-cursor/ContainerTargetCursor';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
@@ -169,6 +170,11 @@ export const projects = [
     imageUrl: '/assets/ribbon-bg.avif',
     path: '/ribbons',
     element: <ContainerRibbons />
+  },
+  {
+    imageUrl: '/assets/splash-cursor-bg.avif',
+    path: '/splash-cursor',
+    element: <ContainerSplashCursor />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
