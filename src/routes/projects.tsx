@@ -11,6 +11,7 @@ import { ContainerElectricBorder } from '@/components/electric-border/ContainerE
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGhostCursor } from '@/components/ghost-cursor/ContainerGhostCursor';
+import { ContainerGlassSurface } from '@/components/glass-surface/ContainerGlassSurface';
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ContainerImageTrailVersion8 } from '@/components/image-trail-variant-8/ContainerImageTrail';
 import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrail';
@@ -194,6 +195,11 @@ export const projects = [
     imageUrl: '/assets/circular-gallery-bg.avif',
     path: '/circular-gallery',
     element: <ContainerCircularGallery />
+  },
+  {
+    imageUrl: '/assets/glasssurface-background.avif',
+    path: '/glass-surface',
+    element: <ContainerGlassSurface />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
