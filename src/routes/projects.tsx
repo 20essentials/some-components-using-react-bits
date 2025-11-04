@@ -14,6 +14,7 @@ import { ContainerGradientText } from '@/components/gradient-text/ContainerGradi
 import { ContainerImageTrailVersion8 } from '@/components/image-trail-variant-8/ContainerImageTrail';
 import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrail';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
+import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBento';
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
@@ -182,6 +183,11 @@ export const projects = [
     imageUrl: '/assets/scrollstack-background.avif',
     path: '/scroll-stack',
     element: <ContainerScrollStack />
+  },
+  {
+    imageUrl: '/assets/magic-bento-background.avif',
+    path: '/magic-bento',
+    element: <ContainerMagicBento />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
