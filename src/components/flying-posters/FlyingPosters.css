@@ -1,0 +1,31 @@
+.ContainerFlyingPosters {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  place-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/assets/bg-posters-flying.avif');
+
+  * {
+    font-size: 2vmax;
+  }
+}
+
+.posters-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.posters-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+

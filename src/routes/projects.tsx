@@ -10,6 +10,7 @@ import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoo
 import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTextContainer';
 import { ContainerElectricBorder } from '@/components/electric-border/ContainerElectricBorder';
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
+import { ContainerFlyingPosters } from '@/components/flying-posters/ContainerFlyingPosters';
 import { ContainerFuzzyText } from '@/components/fuzzy-text/ContainerFuzzyText';
 import { ContainerGhostCursor } from '@/components/ghost-cursor/ContainerGhostCursor';
 import { ContainerGlassSurface } from '@/components/glass-surface/ContainerGlassSurface';
@@ -231,6 +232,11 @@ export const projects = [
     imageUrl: '/assets/pixel-card-background.avif',
     path: '/pixel-card',
     element: <ContainerPixelCard />
+  },
+  {
+    imageUrl: '/assets/flying-posters-bg.avif',
+    path: '/flying-posters',
+    element: <ContainerFlyingPosters />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
