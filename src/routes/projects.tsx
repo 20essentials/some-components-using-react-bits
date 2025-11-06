@@ -21,6 +21,7 @@ import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBento';
 
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
+import { ContainerPixelCard } from '@/components/pixel-card/ContainerPixelCard';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerProfileCard } from '@/components/profile-card/ContainerProfileCard';
 import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
@@ -225,6 +226,11 @@ export const projects = [
     imageUrl: '/assets/profile-card-bg.avif',
     path: '/card-profile',
     element: <ContainerProfileCard />
+  },
+  {
+    imageUrl: '/assets/pixel-card-background.avif',
+    path: '/pixel-card',
+    element: <ContainerPixelCard />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

@@ -24,7 +24,7 @@
   .logo {
     width: 20vmax;
     margin-left: 2vmax;
-    filter: invert(1);
+    /* filter: invert(1); */
     animation: appear 2s ease-in-out both;
     animation-delay: 1.5s;
 
