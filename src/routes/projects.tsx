@@ -1,9 +1,9 @@
-
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
 import { ContainerCircularGallery } from '@/components/circular-gallery/ContainerCircularGallery';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
+import { ContainerCounter } from '@/components/counter/ContainerCounter';
 import { ContainerCrosshair } from '@/components/crosshair/ContainerCrosshair';
 import { ContainerCubes } from '@/components/cubes/ContainerCubes';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
@@ -237,6 +237,11 @@ export const projects = [
     imageUrl: '/assets/flying-posters-bg.avif',
     path: '/flying-posters',
     element: <ContainerFlyingPosters />
+  },
+  {
+    imageUrl: '/assets/counter-bg.avif',
+    path: '/counter',
+    element: <ContainerCounter />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
