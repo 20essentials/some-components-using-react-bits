@@ -16,8 +16,10 @@ import { ContainerGlassSurface } from '@/components/glass-surface/ContainerGlass
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ContainerImageTrailVersion8 } from '@/components/image-trail-variant-8/ContainerImageTrail';
 import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrail';
+import { ContainerLanyard } from '@/components/lanyard/ContainerLanyard';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBento';
+
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
 import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
@@ -212,6 +214,11 @@ export const projects = [
     imageUrl: '/assets/staggered-menu-background.avif',
     path: '/staggered-menu',
     element: <ContainerStaggeredMenu />
+  },
+  {
+    imageUrl: '/assets/card-lanyard-bg.avif',
+    path: '/card-lanyard',
+    element: <ContainerLanyard />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
