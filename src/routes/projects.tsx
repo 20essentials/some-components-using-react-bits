@@ -1,6 +1,7 @@
 
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
+import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
 import { ContainerCircularGallery } from '@/components/circular-gallery/ContainerCircularGallery';
 import { ContainerCircularText } from '@/components/circular-text/ContainerCircularText';
 import { ContainerCrosshair } from '@/components/crosshair/ContainerCrosshair';
@@ -200,6 +201,11 @@ export const projects = [
     imageUrl: '/assets/glasssurface-background.avif',
     path: '/glass-surface',
     element: <ContainerGlassSurface />
+  },
+  {
+    imageUrl: '/assets/chroma-grid-bg.avif',
+    path: '/chroma-grid',
+    element: <ContainerChromaGrid />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
