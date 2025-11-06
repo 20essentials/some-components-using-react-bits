@@ -27,6 +27,7 @@ import { ContainerScrollVelocity } from '@/components/scroll-velocity/ContainerS
 import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { ContainerSplashCursor } from '@/components/splash-cursor/ContainerSplashCursor';
+import { ContainerStaggeredMenu } from '@/components/staggered-menu/ContainerStaggeredMenu';
 import { ContainerTargetCursor } from '@/components/target-cursor/ContainerTargetCursor';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
@@ -206,6 +207,11 @@ export const projects = [
     imageUrl: '/assets/chroma-grid-bg.avif',
     path: '/chroma-grid',
     element: <ContainerChromaGrid />
+  },
+  {
+    imageUrl: '/assets/staggered-menu-background.avif',
+    path: '/staggered-menu',
+    element: <ContainerStaggeredMenu />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
