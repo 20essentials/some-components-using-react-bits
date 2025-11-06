@@ -22,6 +22,7 @@ import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBent
 
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
+import { ContainerProfileCard } from '@/components/profile-card/ContainerProfileCard';
 import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
 import { ContainerScrollStack } from '@/components/scroll-stack/ContainerScrollStack';
@@ -219,6 +220,11 @@ export const projects = [
     imageUrl: '/assets/card-lanyard-bg.avif',
     path: '/card-lanyard',
     element: <ContainerLanyard />
+  },
+  {
+    imageUrl: '/assets/profile-card-bg.avif',
+    path: '/card-profile',
+    element: <ContainerProfileCard />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
