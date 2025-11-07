@@ -1,4 +1,5 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
+import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
@@ -296,6 +297,11 @@ export const projects = [
     imageUrl: '/assets/pixel-bg.avif',
     path: '/pixel-blast',
     element: <ContainerPixelBlast />
+  },
+  {
+    imageUrl: '/assets/bg-color-bend.avif',
+    path: '/color-bends',
+    element: <ContainerColorBends />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
