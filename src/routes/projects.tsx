@@ -1,5 +1,6 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerAurora } from '@/components/background-aurora/ContainerAurora';
+import { ContainerBeams } from '@/components/background-beams/ContainerBeams';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
@@ -320,6 +321,11 @@ export const projects = [
     imageUrl: '/assets/bg-grid-scan.avif',
     path: '/grid-scan',
     element: <ContainerGridScan />
+  },
+  {
+    imageUrl: '/assets/beam-bg.avif',
+    path: '/background-beams',
+    element: <ContainerBeams />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
