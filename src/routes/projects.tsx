@@ -20,6 +20,7 @@ import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrai
 import { ContainerInfiniteMenu } from '@/components/infinite-menu/ContainerInfiniteMenu';
 import { ContainerLanyard } from '@/components/lanyard/ContainerLanyard';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
+import { ContainerLiquidEther } from '@/components/liquid-ether/ContainerLiquidEther';
 import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBento';
 
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
@@ -254,6 +255,11 @@ export const projects = [
     imageUrl: '/assets/container-stepper-bg.avif',
     path: '/container-stepper',
     element: <ContainerStepper />
+  },
+  {
+    imageUrl: '/assets/bg-liquid-ether.avif',
+    path: '/liquid-ether',
+    element: <ContainerLiquidEther />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
