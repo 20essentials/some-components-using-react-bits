@@ -6,6 +6,7 @@ import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGr
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
+import { ContainerLightning } from '@/components/background-trueno-lightning/ContainerLightning';
 import { ContainerGradientBlinds } from '@/components/bakcground-gradient-blind/ContainerGradientBlinds';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
@@ -326,6 +327,11 @@ export const projects = [
     imageUrl: '/assets/beam-bg.avif',
     path: '/background-beams',
     element: <ContainerBeams />
+  },
+  {
+    imageUrl: '/assets/bg-trueno.avif',
+    path: '/background-trueno',
+    element: <ContainerLightning />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
