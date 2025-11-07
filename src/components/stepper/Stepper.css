@@ -1,0 +1,206 @@
+.ContainerStepper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  place-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #5227ff 0%, #7a5cff 50%, #b38aff 100%);
+  background-size: cover;
+  background-position: center;
+  background-image: url("/assets/background-stepper.avif");
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    font-size: 1vmax;
+    display: inline-flex;
+  }
+}
+
+.outer-container {
+  display: flex;
+  min-height: 100%;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+@media (min-width: 640px) {
+  .outer-container {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (min-width: 768px) {
+  .outer-container {
+    aspect-ratio: 2 / 1;
+  }
+}
+
+.step-circle-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.step-circle-container:hover {
+  transform: scale(1.01);
+}
+
+.step-indicator-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.step-content-default {
+  position: relative;
+  overflow: hidden;
+}
+
+.step-default {
+  padding: 2rem;
+}
+
+.footer-container {
+  padding: 0 2rem 2rem;
+}
+
+.footer-nav {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-nav.spread {
+  justify-content: space-between;
+}
+
+.footer-nav.end {
+  justify-content: flex-end;
+}
+
+.back-button {
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  color: #a3a3a3;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.back-button:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.back-button.inactive {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.next-button {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #5227ff;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(82, 39, 255, 0.4);
+}
+
+.next-button:hover {
+  background-color: #6a3fff;
+  box-shadow: 0 8px 20px rgba(82, 39, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.next-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(82, 39, 255, 0.3);
+}
+
+.step-indicator {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.step-indicator-inner {
+  display: flex;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-indicator-inner.active {
+  background: #fff;
+  color: #5227ff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.active-dot {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 9999px;
+  background-color: #fff;
+}
+
+.step-number {
+  font-size: 0.875rem;
+}
+
+.step-connector {
+  position: relative;
+  margin: 0 0.5rem;
+  height: 0.125rem;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.step-connector-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #fff;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.check-icon {
+  height: 1rem;
+  width: 1rem;
+  color: #fff;
+}

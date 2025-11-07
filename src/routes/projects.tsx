@@ -34,6 +34,7 @@ import { ShinyTextContainer } from '@/components/shiny-text/ShinyTextContainer';
 import { ShuffleContainer } from '@/components/shuffle/ShuffleContainer';
 import { ContainerSplashCursor } from '@/components/splash-cursor/ContainerSplashCursor';
 import { ContainerStaggeredMenu } from '@/components/staggered-menu/ContainerStaggeredMenu';
+import { ContainerStepper } from '@/components/stepper/ContainerStepper';
 import { ContainerTargetCursor } from '@/components/target-cursor/ContainerTargetCursor';
 import { TextCursorContainer } from '@/components/text-cursor/TextCursorContainer';
 import { ContainerTextPressure } from '@/components/text-pressure/ContainerTextPressure';
@@ -248,6 +249,11 @@ export const projects = [
     imageUrl: '/assets/bg-image-infinite-menu.avif',
     path: '/infinite-menu',
     element: <ContainerInfiniteMenu />
+  },
+  {
+    imageUrl: '/assets/container-stepper-bg.avif',
+    path: '/container-stepper',
+    element: <ContainerStepper />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
