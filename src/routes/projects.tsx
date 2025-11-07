@@ -26,6 +26,8 @@ import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBent
 import { ContainerNoise } from '@/components/noise/ContainerNoise';
 import { ContainerPixelCard } from '@/components/pixel-card/ContainerPixelCard';
 import { ContainerPixelTransition } from '@/components/pixel-transition/ContainerPixelTransition';
+import { ContainerPrismHover } from '@/components/prism-background-hover/ContainerPrism';
+import { ContainerPrism } from '@/components/prism-background/ContainerPrism';
 import { ContainerProfileCard } from '@/components/profile-card/ContainerProfileCard';
 import { ContainerRibbons } from '@/components/ribbons/ContainerRibbons';
 import { ContainerScrollReveal } from '@/components/scroll-reveal/ContainerScrollReveal';
@@ -260,6 +262,16 @@ export const projects = [
     imageUrl: '/assets/bg-liquid-ether.avif',
     path: '/liquid-ether',
     element: <ContainerLiquidEther />
+  },
+  {
+    imageUrl: '/assets/background-prism-rotate.avif',
+    path: '/prism-background',
+    element: <ContainerPrism />
+  },
+  {
+    imageUrl: '/assets/prism-background-hover.avif',
+    path: '/prism-background-hover',
+    element: <ContainerPrismHover />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
