@@ -1,6 +1,7 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerAurora } from '@/components/background-aurora/ContainerAurora';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
+import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
@@ -314,6 +315,11 @@ export const projects = [
     imageUrl: '/assets/background-blind.avif',
     path: '/background-blind',
     element: <ContainerGradientBlinds />
+  },
+  {
+    imageUrl: '/assets/bg-grid-scan.avif',
+    path: '/grid-scan',
+    element: <ContainerGridScan />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
