@@ -102,7 +102,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
 
   const totalSlots = coords.length;
   if (pool.length === 0) {
-    return coords.map(c => ({ ...c, src: '', alt: '', web:'papi' }));
+    return coords.map(c => ({ ...c, src: '', alt: '', web: 'papi' }));
   }
   if (pool.length > totalSlots) {
     console.warn(
@@ -114,7 +114,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
     if (typeof image === 'string') {
       return { src: image, alt: '' };
     }
-    return { src: image.src || '', alt: image.alt || '', web: image.web  };
+    return { src: image.src || '', alt: image.alt || '', web: image.web };
   });
 
   const usedImages = Array.from(
@@ -139,7 +139,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
     ...c,
     src: usedImages[i].src,
     alt: usedImages[i].alt,
-     web: usedImages[i].web || ''
+    web: usedImages[i].web || ''
   }));
 }
 
@@ -451,7 +451,6 @@ export default function DomeGallery({
     const parent = el.parentElement as HTMLElement;
     focusedElRef.current = el;
     const attributeWeb = el.dataset.web; // más seguro
-    console.log({ attributeWeb });
 
     const offsetX = getDataNumber(parent, 'offsetX', 0);
     const offsetY = getDataNumber(parent, 'offsetY', 0);
@@ -761,20 +760,18 @@ export default function DomeGallery({
     };
   }, []);
 
-  console.log(items)
-
   return (
     <div
       ref={rootRef}
       className='sphere-root'
       style={
         {
-          ['--segments-x' as any]: segments,
-          ['--segments-y' as any]: segments,
-          ['--overlay-blur-color' as any]: overlayBlurColor,
-          ['--tile-radius' as any]: imageBorderRadius,
-          ['--enlarge-radius' as any]: openedImageBorderRadius,
-          ['--image-filter' as any]: grayscale ? 'grayscale(1)' : 'none'
+          ['--segments-x']: segments,
+          ['--segments-y']: segments,
+          ['--overlay-blur-color']: overlayBlurColor,
+          ['--tile-radius']: imageBorderRadius,
+          ['--enlarge-radius']: openedImageBorderRadius,
+          ['--image-filter']: grayscale ? 'grayscale(1)' : 'none'
         } as React.CSSProperties
       }
     >

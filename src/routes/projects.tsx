@@ -4,6 +4,7 @@ import { ContainerColorBends } from '@/components/background-color-bends/Contain
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
+import { ContainerGradientBlinds } from '@/components/bakcground-gradient-blind/ContainerGradientBlinds';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
 import { ContainerCircularGallery } from '@/components/circular-gallery/ContainerCircularGallery';
@@ -308,6 +309,11 @@ export const projects = [
     imageUrl: '/assets/background-aurora.avif',
     path: '/background-aurora',
     element: <ContainerAurora />
+  },
+  {
+    imageUrl: '/assets/background-blind.avif',
+    path: '/background-blind',
+    element: <ContainerGradientBlinds />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
