@@ -1,5 +1,6 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
+import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
@@ -290,6 +291,11 @@ export const projects = [
     imageUrl: '/assets/bg-light-ray.avif',
     path: '/light-rays',
     element: <ContainerLightRays />
+  },
+  {
+    imageUrl: '/assets/pixel-bg.avif',
+    path: '/pixel-blast',
+    element: <ContainerPixelBlast />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

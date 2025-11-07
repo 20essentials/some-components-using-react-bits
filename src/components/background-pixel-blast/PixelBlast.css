@@ -1,0 +1,22 @@
+.ContainerPixelBlast {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+/*   position: relative;
+  flex-wrap: wrap;
+  place-content: center; */
+  overflow: hidden;
+
+  canvas {
+    height: 150vh !important;
+    width: 100vw;
+  }
+}
+
+.pixel-blast-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
