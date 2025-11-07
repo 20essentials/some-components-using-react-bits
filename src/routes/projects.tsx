@@ -1,4 +1,5 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
+import { ContainerAurora } from '@/components/background-aurora/ContainerAurora';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
@@ -302,6 +303,11 @@ export const projects = [
     imageUrl: '/assets/bg-color-bend.avif',
     path: '/color-bends',
     element: <ContainerColorBends />
+  },
+  {
+    imageUrl: '/assets/background-aurora.avif',
+    path: '/background-aurora',
+    element: <ContainerAurora />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
