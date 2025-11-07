@@ -17,6 +17,7 @@ import { ContainerGlassSurface } from '@/components/glass-surface/ContainerGlass
 import { ContainerGradientText } from '@/components/gradient-text/ContainerGradientText';
 import { ContainerImageTrailVersion8 } from '@/components/image-trail-variant-8/ContainerImageTrail';
 import { ContainerImageTrail } from '@/components/image-trail/ContainerImageTrail';
+import { ContainerInfiniteMenu } from '@/components/infinite-menu/ContainerInfiniteMenu';
 import { ContainerLanyard } from '@/components/lanyard/ContainerLanyard';
 import { ContainerLaserFlow } from '@/components/laser-flow/ContainerLaserFlow';
 import { ContainerMagicBento } from '@/components/magic-bento/ContainerMagicBento';
@@ -242,6 +243,11 @@ export const projects = [
     imageUrl: '/assets/counter-bg.avif',
     path: '/counter',
     element: <ContainerCounter />
+  },
+  {
+    imageUrl: '/assets/bg-image-infinite-menu.avif',
+    path: '/infinite-menu',
+    element: <ContainerInfiniteMenu />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
