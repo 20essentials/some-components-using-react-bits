@@ -7,6 +7,7 @@ import { ContainerCounter } from '@/components/counter/ContainerCounter';
 import { ContainerCrosshair } from '@/components/crosshair/ContainerCrosshair';
 import { ContainerCubes } from '@/components/cubes/ContainerCubes';
 import { ContainerCurvedLoop } from '@/components/curved-loop/ContainerCurvedLoop';
+import { ContainerDarkVeil } from '@/components/dark-veil/ContainerDarkVeil';
 import { DecryptedTextContainer } from '@/components/decrypted-text/DecryptedTextContainer';
 import { ContainerElectricBorder } from '@/components/electric-border/ContainerElectricBorder';
 import { ContainerFallingText } from '@/components/falling-text/FallingTextContainer';
@@ -272,6 +273,11 @@ export const projects = [
     imageUrl: '/assets/prism-background-hover.avif',
     path: '/prism-background-hover',
     element: <ContainerPrismHover />
+  },
+  {
+    imageUrl: '/assets/bg-dark-veil.avif',
+    path: '/dark-veil',
+    element: <ContainerDarkVeil />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];

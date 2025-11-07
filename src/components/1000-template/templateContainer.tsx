@@ -1,7 +1,7 @@
 
 export const ContainerTemplate = () => {
   return (
-    <article className='container-template'>
+    <article className='ContainerTemplate'>
 
     </article>
   );
