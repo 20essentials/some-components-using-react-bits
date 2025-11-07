@@ -1,4 +1,5 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
+import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
 import { ContainerCircularGallery } from '@/components/circular-gallery/ContainerCircularGallery';
@@ -278,6 +279,11 @@ export const projects = [
     imageUrl: '/assets/bg-dark-veil.avif',
     path: '/dark-veil',
     element: <ContainerDarkVeil />
+  },
+  {
+    imageUrl: '/assets/bg-silk.avif',
+    path: '/silk',
+    element: <ContainerSilk />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
