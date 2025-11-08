@@ -7,6 +7,7 @@ import { ContainerDither } from '@/components/background-dither/ContainerDither'
 import { ContainerDotGrid } from '@/components/background-dot-grid/ContainerDotGrid';
 import { ContainerFaultyTerminal } from '@/components/background-faulty-terminal/ContainerFaultyTerminal';
 import { ContainerGalaxy } from '@/components/background-galaxy/ContainerGalaxy';
+import { ContainerGridDistortion } from '@/components/background-grid-distorsion/ContainerGridDistortion';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerHyperspeed } from '@/components/background-hyperspeed/ContainerHyperspeed';
 import { ContainerIridescence } from '@/components/background-iridiscence/ContainerIridescence';
@@ -392,6 +393,11 @@ export const projects = [
     imageUrl: '/assets/background-waves.avif',
     path: '/background-waves',
     element: <ContainerWaves />
+  },
+  {
+    imageUrl: '/assets/grid-distorsion-bg.avif',
+    path: '/background-grid-distorsion',
+    element: <ContainerGridDistortion />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
