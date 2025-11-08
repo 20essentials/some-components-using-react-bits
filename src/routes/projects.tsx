@@ -12,6 +12,7 @@ import { ContainerGridDistortion } from '@/components/background-grid-distorsion
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerHyperspeed } from '@/components/background-hyperspeed/ContainerHyperspeed';
 import { ContainerIridescence } from '@/components/background-iridiscence/ContainerIridescence';
+import { ContainerLetterGlitch } from '@/components/background-letter-glitch/ContainerLetterGlitch';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerOrb } from '@/components/background-orb/ContainerOrb';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
@@ -410,6 +411,11 @@ export const projects = [
     imageUrl: '/assets/bg-orb.avif',
     path: '/background-orb',
     element: <ContainerOrb />
+  },
+  {
+    imageUrl: '/assets/bg-letter-glitch.avif',
+    path: '/background-letter-glitch',
+    element: <ContainerLetterGlitch />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
