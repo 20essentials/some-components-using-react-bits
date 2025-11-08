@@ -5,6 +5,7 @@ import { ContainerColorBends } from '@/components/background-color-bends/Contain
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
+import { ContainerPrismaticBurst } from '@/components/background-prismatic-burst/ContainerPrismaticBurst';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
 import { ContainerLightning } from '@/components/background-trueno-lightning/ContainerLightning';
 import { ContainerGradientBlinds } from '@/components/bakcground-gradient-blind/ContainerGradientBlinds';
@@ -332,6 +333,11 @@ export const projects = [
     imageUrl: '/assets/bg-trueno.avif',
     path: '/background-trueno',
     element: <ContainerLightning />
+  },
+  {
+    imageUrl: '/assets/bg-prismatic-burst.avif',
+    path: '/background-prismatic-burst',
+    element: <ContainerPrismaticBurst />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
