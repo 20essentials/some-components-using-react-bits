@@ -1,0 +1,21 @@
+.ContainerIridescence{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  place-content: center;
+  overflow: hidden;
+/*   background-size: cover;
+  background-position: center;
+  background-image: url('/assets/.avif'); */
+
+  * {
+    font-size: 2vmax;
+  }
+}
+
+.iridescence-container {
+  width: 100%;
+  height: 100%;
+}

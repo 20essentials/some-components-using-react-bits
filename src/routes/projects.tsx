@@ -9,6 +9,7 @@ import { ContainerFaultyTerminal } from '@/components/background-faulty-terminal
 import { ContainerGalaxy } from '@/components/background-galaxy/ContainerGalaxy';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerHyperspeed } from '@/components/background-hyperspeed/ContainerHyperspeed';
+import { ContainerIridescence } from '@/components/background-iridiscence/ContainerIridescence';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerPrismaticBurst } from '@/components/background-prismatic-burst/ContainerPrismaticBurst';
@@ -380,6 +381,11 @@ export const projects = [
     imageUrl: '/assets/bg-hyperspeed.avif',
     path: '/background-hyperspeed',
     element: <ContainerHyperspeed />
+  },
+  {
+    imageUrl: '/assets/background-iridescence.avif',
+    path: '/background-iridescence',
+    element: <ContainerIridescence />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
