@@ -2,6 +2,7 @@ import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerAurora } from '@/components/background-aurora/ContainerAurora';
 import { ContainerBeams } from '@/components/background-beams/ContainerBeams';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
+import { ContainerGalaxy } from '@/components/background-galaxy/ContainerGalaxy';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
@@ -338,6 +339,11 @@ export const projects = [
     imageUrl: '/assets/bg-prismatic-burst.avif',
     path: '/background-prismatic-burst',
     element: <ContainerPrismaticBurst />
+  },
+  {
+    imageUrl: '/assets/bg-galaxy.avif',
+    path: '/background-galaxy',
+    element: <ContainerGalaxy />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
