@@ -1,6 +1,7 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
 import { ContainerThreads } from '@/components/backgroudn-threads/ContainerThreads';
 import { ContainerAurora } from '@/components/background-aurora/ContainerAurora';
+import { ContainerBallpit } from '@/components/background-ball-pit/ContainerBallpit';
 import { ContainerBeams } from '@/components/background-beams/ContainerBeams';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
 import { ContainerDither } from '@/components/background-dither/ContainerDither';
@@ -398,6 +399,11 @@ export const projects = [
     imageUrl: '/assets/grid-distorsion-bg.avif',
     path: '/background-grid-distorsion',
     element: <ContainerGridDistortion />
+  },
+  {
+    imageUrl: '/assets/background-ball-pit.avif',
+    path: '/background-ballpit',
+    element: <ContainerBallpit />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
