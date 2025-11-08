@@ -1,4 +1,5 @@
 import { ContainerASCIIText } from '@/components/ascii-text/ASCIITextContainer';
+import { ContainerThreads } from '@/components/backgroudn-threads/ContainerThreads';
 import { ContainerAurora } from '@/components/background-aurora/ContainerAurora';
 import { ContainerBeams } from '@/components/background-beams/ContainerBeams';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
@@ -368,6 +369,11 @@ export const projects = [
     imageUrl: '/assets/bg-dot.avif',
     path: '/background-dot-grid',
     element: <ContainerDotGrid />
+  },
+  {
+    imageUrl: '/assets/bg-threads.avif',
+    path: '/background-threads',
+    element: <ContainerThreads />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
