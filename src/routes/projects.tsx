@@ -3,6 +3,7 @@ import { ContainerAurora } from '@/components/background-aurora/ContainerAurora'
 import { ContainerBeams } from '@/components/background-beams/ContainerBeams';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
 import { ContainerDither } from '@/components/background-dither/ContainerDither';
+import { ContainerDotGrid } from '@/components/background-dot-grid/ContainerDotGrid';
 import { ContainerFaultyTerminal } from '@/components/background-faulty-terminal/ContainerFaultyTerminal';
 import { ContainerGalaxy } from '@/components/background-galaxy/ContainerGalaxy';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
@@ -362,6 +363,11 @@ export const projects = [
     imageUrl: '/assets/background-ripple.avif',
     path: '/background-ripple-grid',
     element: <ContainerRippleGrid />
+  },
+  {
+    imageUrl: '/assets/bg-dot.avif',
+    path: '/background-dot-grid',
+    element: <ContainerDotGrid />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
