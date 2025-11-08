@@ -9,6 +9,7 @@ import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGr
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerPrismaticBurst } from '@/components/background-prismatic-burst/ContainerPrismaticBurst';
+import { ContainerRippleGrid } from '@/components/background-ripple-grid/ContainerRippleGrid';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
 import { ContainerLightning } from '@/components/background-trueno-lightning/ContainerLightning';
 import { ContainerGradientBlinds } from '@/components/bakcground-gradient-blind/ContainerGradientBlinds';
@@ -356,6 +357,11 @@ export const projects = [
     imageUrl: '/assets/bg-terminal.avif',
     path: '/background-faulty-terminal',
     element: <ContainerFaultyTerminal />
+  },
+  {
+    imageUrl: '/assets/background-ripple.avif',
+    path: '/background-ripple-grid',
+    element: <ContainerRippleGrid />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
