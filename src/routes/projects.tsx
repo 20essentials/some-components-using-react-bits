@@ -13,6 +13,7 @@ import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGr
 import { ContainerHyperspeed } from '@/components/background-hyperspeed/ContainerHyperspeed';
 import { ContainerIridescence } from '@/components/background-iridiscence/ContainerIridescence';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
+import { ContainerOrb } from '@/components/background-orb/ContainerOrb';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerPrismaticBurst } from '@/components/background-prismatic-burst/ContainerPrismaticBurst';
 import { ContainerRippleGrid } from '@/components/background-ripple-grid/ContainerRippleGrid';
@@ -404,6 +405,11 @@ export const projects = [
     imageUrl: '/assets/background-ball-pit.avif',
     path: '/background-ballpit',
     element: <ContainerBallpit />
+  },
+  {
+    imageUrl: '/assets/bg-orb.avif',
+    path: '/background-orb',
+    element: <ContainerOrb />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
