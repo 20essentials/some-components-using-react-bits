@@ -16,6 +16,7 @@ import { ContainerPrismaticBurst } from '@/components/background-prismatic-burst
 import { ContainerRippleGrid } from '@/components/background-ripple-grid/ContainerRippleGrid';
 import { ContainerSilk } from '@/components/background-silk/ContainerSilk';
 import { ContainerLightning } from '@/components/background-trueno-lightning/ContainerLightning';
+import { ContainerWaves } from '@/components/background-waves/ContainerWaves';
 import { ContainerGradientBlinds } from '@/components/bakcground-gradient-blind/ContainerGradientBlinds';
 import { ContainerBlurText } from '@/components/blur-text/ContainerBlurText';
 import { ContainerChromaGrid } from '@/components/chroma-grid/ContainerChromaGrid';
@@ -386,6 +387,11 @@ export const projects = [
     imageUrl: '/assets/background-iridescence.avif',
     path: '/background-iridescence',
     element: <ContainerIridescence />
+  },
+  {
+    imageUrl: '/assets/background-waves.avif',
+    path: '/background-waves',
+    element: <ContainerWaves />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
