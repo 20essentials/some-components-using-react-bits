@@ -3,6 +3,7 @@ import { ContainerAurora } from '@/components/background-aurora/ContainerAurora'
 import { ContainerBeams } from '@/components/background-beams/ContainerBeams';
 import { ContainerColorBends } from '@/components/background-color-bends/ContainerColorBends';
 import { ContainerDither } from '@/components/background-dither/ContainerDither';
+import { ContainerFaultyTerminal } from '@/components/background-faulty-terminal/ContainerFaultyTerminal';
 import { ContainerGalaxy } from '@/components/background-galaxy/ContainerGalaxy';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
@@ -350,6 +351,11 @@ export const projects = [
     imageUrl: '/assets/bg-dither.avif',
     path: '/background-dither',
     element: <ContainerDither />
+  },
+  {
+    imageUrl: '/assets/bg-terminal.avif',
+    path: '/background-faulty-terminal',
+    element: <ContainerFaultyTerminal />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
