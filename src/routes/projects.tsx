@@ -15,6 +15,7 @@ import { ContainerHyperspeed } from '@/components/background-hyperspeed/Containe
 import { ContainerIridescence } from '@/components/background-iridiscence/ContainerIridescence';
 import { ContainerLetterGlitch } from '@/components/background-letter-glitch/ContainerLetterGlitch';
 import { ContainerLightRays } from '@/components/background-light-rays/ContainerLightRays';
+import { ContainerLiquidChrome } from '@/components/background-liquid-chrome/ContainerLiquidChrome';
 import { ContainerOrb } from '@/components/background-orb/ContainerOrb';
 import { ContainerPixelBlast } from '@/components/background-pixel-blast/ContainerPixelBlast';
 import { ContainerPrismaticBurst } from '@/components/background-prismatic-burst/ContainerPrismaticBurst';
@@ -422,6 +423,11 @@ export const projects = [
     imageUrl: '/assets/circular-grid.avif',
     path: '/background-grid-motion',
     element: <ContainerGridMotion />
+  },
+  {
+    imageUrl: '/assets/bg-liquid-chrome.avif',
+    path: '/background-liquid-chrome',
+    element: <ContainerLiquidChrome />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
