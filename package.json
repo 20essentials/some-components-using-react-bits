@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "9.25.0",
+    "@types/matter-js": "^0.20.2",
     "@types/node": "22.15.21",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
