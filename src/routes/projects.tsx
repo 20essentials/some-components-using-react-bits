@@ -9,6 +9,7 @@ import { ContainerDotGrid } from '@/components/background-dot-grid/ContainerDotG
 import { ContainerFaultyTerminal } from '@/components/background-faulty-terminal/ContainerFaultyTerminal';
 import { ContainerGalaxy } from '@/components/background-galaxy/ContainerGalaxy';
 import { ContainerGridDistortion } from '@/components/background-grid-distorsion/ContainerGridDistortion';
+import { ContainerGridMotion } from '@/components/background-grid-motion/ContainerGridMotion';
 import { ContainerGridScan } from '@/components/background-grid-scan/ContainerGridScan';
 import { ContainerHyperspeed } from '@/components/background-hyperspeed/ContainerHyperspeed';
 import { ContainerIridescence } from '@/components/background-iridiscence/ContainerIridescence';
@@ -416,6 +417,11 @@ export const projects = [
     imageUrl: '/assets/bg-letter-glitch.avif',
     path: '/background-letter-glitch',
     element: <ContainerLetterGlitch />
+  },
+  {
+    imageUrl: '/assets/circular-grid.avif',
+    path: '/background-grid-motion',
+    element: <ContainerGridMotion />
   },
   { imageUrl: '', path: '*', element: <Home /> }
 ];
