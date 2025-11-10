@@ -1,12 +1,14 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-
 function lerp(a: number, b: number, n: number): number {
   return (1 - n) * a + n * b;
 }
 
-function getLocalPointerPos(e: MouseEvent | TouchEvent, rect: DOMRect): { x: number; y: number } {
+function getLocalPointerPos(
+  e: MouseEvent | TouchEvent,
+  rect: DOMRect
+): { x: number; y: number } {
   let clientX = 0,
     clientY = 0;
   if ('touches' in e && e.touches.length > 0) {
@@ -22,7 +24,10 @@ function getLocalPointerPos(e: MouseEvent | TouchEvent, rect: DOMRect): { x: num
   };
 }
 
-function getMouseDistance(p1: { x: number; y: number }, p2: { x: number; y: number }): number {
+function getMouseDistance(
+  p1: { x: number; y: number },
+  p2: { x: number; y: number }
+): number {
   const dx = p1.x - p2.x;
   const dy = p1.y - p2.y;
   return Math.hypot(dx, dy);
@@ -59,7 +64,7 @@ class ImageItem {
 
 class ImageTrailVariant1 {
   private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -74,7 +79,9 @@ class ImageTrailVariant1 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -121,7 +128,8 @@ class ImageTrailVariant1 {
 
   private showNextImage() {
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
 
     gsap.killTweensOf(img.DOM.el);
@@ -173,8 +181,8 @@ class ImageTrailVariant1 {
 }
 
 class ImageTrailVariant2 {
-  private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  container: HTMLDivElement;
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -189,7 +197,9 @@ class ImageTrailVariant2 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -236,7 +246,8 @@ class ImageTrailVariant2 {
 
   private showNextImage() {
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
 
     gsap.killTweensOf(img.DOM.el);
@@ -300,8 +311,8 @@ class ImageTrailVariant2 {
 }
 
 class ImageTrailVariant3 {
-  private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  container: HTMLDivElement;
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -316,7 +327,9 @@ class ImageTrailVariant3 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -363,7 +376,8 @@ class ImageTrailVariant3 {
 
   private showNextImage() {
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
 
     gsap.killTweensOf(img.DOM.el);
@@ -430,8 +444,8 @@ class ImageTrailVariant3 {
 }
 
 class ImageTrailVariant4 {
-  private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  container: HTMLDivElement;
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -446,7 +460,9 @@ class ImageTrailVariant4 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -491,13 +507,14 @@ class ImageTrailVariant4 {
 
   private showNextImage() {
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
     gsap.killTweensOf(img.DOM.el);
 
     let dx = this.mousePos.x - this.cacheMousePos.x;
     let dy = this.mousePos.y - this.cacheMousePos.y;
-    let distance = Math.sqrt(dx * dx + dy * dy);
+    const distance = Math.sqrt(dx * dx + dy * dy);
     if (distance !== 0) {
       dx /= distance;
       dy /= distance;
@@ -532,10 +549,10 @@ class ImageTrailVariant4 {
         img.DOM.inner,
         {
           scale: 2,
-          filter: `brightness(${Math.max((400 * distance) / 100, 100)}%) contrast(${Math.max(
+          filter: `brightness(${Math.max(
             (400 * distance) / 100,
             100
-          )}%)`
+          )}%) contrast(${Math.max((400 * distance) / 100, 100)}%)`
         },
         {
           duration: 0.4,
@@ -580,8 +597,8 @@ class ImageTrailVariant4 {
 }
 
 class ImageTrailVariant5 {
-  private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  container: HTMLDivElement;
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -597,7 +614,9 @@ class ImageTrailVariant5 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -648,7 +667,7 @@ class ImageTrailVariant5 {
     if (angle > 90 && angle <= 270) angle += 180;
     const isMovingClockwise = angle >= this.lastAngle;
     this.lastAngle = angle;
-    let startAngle = isMovingClockwise ? angle - 10 : angle + 10;
+    const startAngle = isMovingClockwise ? angle - 10 : angle + 10;
     const distance = Math.sqrt(dx * dx + dy * dy);
     if (distance !== 0) {
       dx /= distance;
@@ -658,7 +677,8 @@ class ImageTrailVariant5 {
     dy *= distance / 150;
 
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
     gsap.killTweensOf(img.DOM.el);
 
@@ -722,8 +742,8 @@ class ImageTrailVariant5 {
 }
 
 class ImageTrailVariant6 {
-  private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  container: HTMLDivElement;
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -738,7 +758,9 @@ class ImageTrailVariant6 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -809,7 +831,8 @@ class ImageTrailVariant6 {
     const speed = Math.sqrt(dx * dx + dy * dy);
 
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
 
     const scaleFactor = this.mapSpeedToSize(speed, 0.3, 2);
@@ -836,7 +859,9 @@ class ImageTrailVariant6 {
           duration: 0.8,
           ease: 'power3',
           scale: scaleFactor,
-          filter: `grayscale(${grayscaleValue * 100}%) brightness(${brightnessValue * 100}%) blur(${blurValue}px)`,
+          filter: `grayscale(${grayscaleValue * 100}%) brightness(${
+            brightnessValue * 100
+          }%) blur(${blurValue}px)`,
           x: this.mousePos.x - (img.rect?.width ?? 0) / 2,
           y: this.mousePos.y - (img.rect?.height ?? 0) / 2
         },
@@ -887,8 +912,8 @@ function getNewPosition(position: number, offset: number, arr: ImageItem[]) {
 }
 
 class ImageTrailVariant7 {
-  private container: HTMLDivElement;
-  private DOM: { el: HTMLDivElement };
+  container: HTMLDivElement;
+  DOM: { el: HTMLDivElement };
   private images: ImageItem[];
   private imagesTotal: number;
   private imgPosition: number;
@@ -905,7 +930,9 @@ class ImageTrailVariant7 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -917,7 +944,10 @@ class ImageTrailVariant7 {
     this.cacheMousePos = { x: 0, y: 0 };
     this.visibleImagesCount = 0;
     this.visibleImagesTotal = 9;
-    this.visibleImagesTotal = Math.min(this.visibleImagesTotal, this.imagesTotal - 1);
+    this.visibleImagesTotal = Math.min(
+      this.visibleImagesTotal,
+      this.imagesTotal - 1
+    );
 
     const handlePointerMove = (ev: MouseEvent | TouchEvent) => {
       const rect = container.getBoundingClientRect();
@@ -954,7 +984,8 @@ class ImageTrailVariant7 {
 
   private showNextImage() {
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
     ++this.visibleImagesCount;
 
@@ -988,7 +1019,11 @@ class ImageTrailVariant7 {
       );
 
     if (this.visibleImagesCount >= this.visibleImagesTotal) {
-      const lastInQueue = getNewPosition(this.imgPosition, this.visibleImagesTotal, this.images);
+      const lastInQueue = getNewPosition(
+        this.imgPosition,
+        this.visibleImagesTotal,
+        this.images
+      );
       const oldImg = this.images[lastInQueue];
       gsap.to(oldImg.DOM.el, {
         duration: 0.4,
@@ -1035,7 +1070,9 @@ class ImageTrailVariant8 {
   constructor(container: HTMLDivElement) {
     this.container = container;
     this.DOM = { el: container };
-    this.images = [...container.querySelectorAll('.content__img')].map(img => new ImageItem(img as HTMLDivElement));
+    this.images = [...container.querySelectorAll('.content__img')].map(
+      img => new ImageItem(img as HTMLDivElement)
+    );
     this.imagesTotal = this.images.length;
     this.imgPosition = 0;
     this.zIndexVal = 1;
@@ -1104,7 +1141,8 @@ class ImageTrailVariant8 {
     const brightness = 0.2 + normalizedZ * 2.3;
 
     ++this.zIndexVal;
-    this.imgPosition = this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
+    this.imgPosition =
+      this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
     gsap.killTweensOf(img.DOM.el);
 
@@ -1189,21 +1227,23 @@ interface ImageTrailProps {
   variant?: number;
 }
 
-export default function ImageTrail({ items = [], variant = 1 }: ImageTrailProps): JSX.Element {
+export default function ImageTrail({ items = [], variant = 1 }: ImageTrailProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
     const Cls = variantMap[variant] || variantMap[1];
     new Cls(containerRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variant, items]);
 
   return (
-    <div className="content" ref={containerRef}>
+    <div className='content' ref={containerRef}>
       {items.map((url, i) => (
-        <div className="content__img" key={i}>
-          <div className="content__img-inner" style={{ backgroundImage: `url(${url})` }} />
+        <div className='content__img' key={i}>
+          <div
+            className='content__img-inner'
+            style={{ backgroundImage: `url(${url})` }}
+          />
         </div>
       ))}
     </div>

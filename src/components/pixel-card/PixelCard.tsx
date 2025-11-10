@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { type JSX } from 'react';
 import './PixelCard.css';
 
 class Pixel {
@@ -58,7 +57,12 @@ class Pixel {
   draw() {
     const centerOffset = this.maxSizeInteger * 0.5 - this.size * 0.5;
     this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(this.x + centerOffset, this.y + centerOffset, this.size, this.size);
+    this.ctx.fillRect(
+      this.x + centerOffset,
+      this.y + centerOffset,
+      this.size,
+      this.size
+    );
   }
 
   appear() {
@@ -175,13 +179,17 @@ export default function PixelCard({
   noFocus,
   className = '',
   children
-}: PixelCardProps): JSX.Element {
+}: PixelCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pixelsRef = useRef<Pixel[]>([]);
-  const animationRef = useRef<ReturnType<typeof requestAnimationFrame> | null>(null);
+  const animationRef = useRef<ReturnType<typeof requestAnimationFrame> | null>(
+    null
+  );
   const timePreviousRef = useRef(performance.now());
-  const reducedMotion = useRef(window.matchMedia('(prefers-reduced-motion: reduce)').matches).current;
+  const reducedMotion = useRef(
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ).current;
 
   const variantCfg: VariantConfig = VARIANTS[variant] || VARIANTS.default;
   const finalGap = gap ?? variantCfg.gap;
@@ -213,7 +221,17 @@ export default function PixelCard({
         const distance = Math.sqrt(dx * dx + dy * dy);
         const delay = reducedMotion ? 0 : distance;
         if (!ctx) return;
-        pxs.push(new Pixel(canvasRef.current, ctx, x, y, color, getEffectiveSpeed(finalSpeed, reducedMotion), delay));
+        pxs.push(
+          new Pixel(
+            canvasRef.current,
+            ctx,
+            x,
+            y,
+            color,
+            getEffectiveSpeed(finalSpeed, reducedMotion),
+            delay
+          )
+        );
       }
     }
     pixelsRef.current = pxs;
@@ -292,7 +310,7 @@ export default function PixelCard({
       onBlur={finalNoFocus ? undefined : onBlur}
       tabIndex={finalNoFocus ? -1 : 0}
     >
-      <canvas className="pixel-canvas" ref={canvasRef} />
+      <canvas className='pixel-canvas' ref={canvasRef} />
       {children}
     </div>
   );
