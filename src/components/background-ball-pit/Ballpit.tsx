@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useRef, useEffect } from 'react';
 import {
   Clock,
@@ -199,8 +200,8 @@ class X {
       this.size.wHeight =
         2 * Math.tan(fovRad / 2) * this.camera.position.length();
       this.size.wWidth = this.size.wHeight * this.camera.aspect;
-    } else if ((this.camera as any).isOrthographicCamera) {
-      const cam = this.camera as any;
+    } else if (this.camera.isOrthographicCamera) {
+      const cam = this.camera;
       this.size.wHeight = cam.top - cam.bottom;
       this.size.wWidth = cam.right - cam.left;
     }
@@ -268,12 +269,12 @@ class X {
   clear() {
     this.scene.traverse(obj => {
       if (
-        (obj as any).isMesh &&
-        typeof (obj as any).material === 'object' &&
-        (obj as any).material !== null
+        obj.isMesh &&
+        typeof obj.material === 'object' &&
+        obj.material !== null
       ) {
-        Object.keys((obj as any).material).forEach(key => {
-          const matProp = (obj as any).material[key];
+        Object.keys(obj.material).forEach(key => {
+          const matProp = obj.material[key];
           if (
             matProp &&
             typeof matProp === 'object' &&
@@ -282,8 +283,8 @@ class X {
             matProp.dispose();
           }
         });
-        (obj as any).material.dispose();
-        (obj as any).geometry.dispose();
+        obj.material.dispose();
+        obj.geometry.dispose();
       }
     });
     this.scene.clear();
@@ -736,7 +737,7 @@ function isInside(rect: DOMRect) {
   );
 }
 
-const { randFloat, randFloatSpread } = MathUtils;
+/* const { randFloat, randFloatSpread } = MathUtils;
 const F = new Vector3();
 const I = new Vector3();
 const O = new Vector3();
@@ -746,7 +747,7 @@ const N = new Vector3();
 const _ = new Vector3();
 const j = new Vector3();
 const H = new Vector3();
-const T = new Vector3();
+const T = new Vector3(); */
 
 class Z extends InstancedMesh {
   config: typeof XConfig;

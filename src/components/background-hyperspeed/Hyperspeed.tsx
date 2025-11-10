@@ -1,6 +1,14 @@
+//@ts-nocheck
 import { useEffect, useRef, type FC } from 'react';
 import * as THREE from 'three';
-import { BloomEffect, EffectComposer, EffectPass, RenderPass, SMAAEffect, SMAAPreset } from 'postprocessing';
+import {
+  BloomEffect,
+  EffectComposer,
+  EffectPass,
+  RenderPass,
+  SMAAEffect,
+  SMAAPreset
+} from 'postprocessing';
 
 import './Hyperspeed.css';
 
@@ -186,7 +194,8 @@ const distortions: Distortions = {
         Math.cos(progress * Math.PI * uFreq.x + time) * uAmp.x -
           Math.cos(movementProgressFix * Math.PI * uFreq.x + time) * uAmp.x,
         Math.sin(progress * Math.PI * uFreq.y + time + Math.PI / 2) * uAmp.y -
-          Math.sin(movementProgressFix * Math.PI * uFreq.y + time + Math.PI / 2) * uAmp.y,
+          Math.sin(movementProgressFix * Math.PI * uFreq.y + time + Math.PI / 2) *
+            uAmp.y,
         0
       );
       const lookAtAmp = new THREE.Vector3(2, 0.4, 1);
@@ -260,11 +269,16 @@ const distortions: Distortions = {
 
       const getX = (p: number) =>
         Math.cos(Math.PI * p * uFreq.x + time) * uAmp.x +
-        Math.pow(Math.cos(Math.PI * p * uFreq.y + time * (uFreq.y / uFreq.x)), 2) * uAmp.y;
+        Math.pow(
+          Math.cos(Math.PI * p * uFreq.y + time * (uFreq.y / uFreq.x)),
+          2
+        ) *
+          uAmp.y;
 
       const getY = (p: number) =>
         -nsin(Math.PI * p * uFreq.z + time) * uAmp.z -
-        Math.pow(nsin(Math.PI * p * uFreq.w + time / (uFreq.z / uFreq.w)), 5) * uAmp.w;
+        Math.pow(nsin(Math.PI * p * uFreq.w + time / (uFreq.z / uFreq.w)), 5) *
+          uAmp.w;
 
       const distortion = new THREE.Vector3(
         getX(progress) - getX(progress + 0.007),
@@ -369,7 +383,9 @@ const distortions: Distortions = {
       const uPowY = deepUniforms.uPowY.value;
 
       const getX = (p: number) => Math.sin(p * Math.PI * uFreq.x + time) * uAmp.x;
-      const getY = (p: number) => Math.pow(p * uPowY.x, uPowY.y) + Math.sin(p * Math.PI * uFreq.y + time) * uAmp.y;
+      const getY = (p: number) =>
+        Math.pow(p * uPowY.x, uPowY.y) +
+        Math.sin(p * Math.PI * uFreq.y + time) * uAmp.y;
 
       const distortion = new THREE.Vector3(
         getX(progress) - getX(progress + 0.01),
@@ -423,7 +439,12 @@ function pickRandom<T>(arr: T | T[]): T {
   return arr;
 }
 
-function lerp(current: number, target: number, speed = 0.1, limit = 0.001): number {
+function lerp(
+  current: number,
+  target: number,
+  speed = 0.1,
+  limit = 0.001
+): number {
   let change = (target - current) * speed;
   if (Math.abs(change) < limit) {
     change = target - current;
@@ -455,10 +476,15 @@ class CarLights {
 
   init() {
     const options = this.options;
-    const curve = new THREE.LineCurve3(new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, 0, -1));
+    const curve = new THREE.LineCurve3(
+      new THREE.Vector3(0, 0, 0),
+      new THREE.Vector3(0, 0, -1)
+    );
     const geometry = new THREE.TubeGeometry(curve, 40, 1, 8, false);
 
-    const instanced = new THREE.InstancedBufferGeometry().copy(geometry as any) as THREE.InstancedBufferGeometry;
+    const instanced = new THREE.InstancedBufferGeometry().copy(
+      geometry as any
+    ) as THREE.InstancedBufferGeometry;
     instanced.instanceCount = options.lightPairsPerRoadWay * 2;
 
     const laneWidth = options.roadWidth / options.lanesPerRoad;
@@ -515,9 +541,18 @@ class CarLights {
       aColor.push(color.b);
     }
 
-    instanced.setAttribute('aOffset', new THREE.InstancedBufferAttribute(new Float32Array(aOffset), 3, false));
-    instanced.setAttribute('aMetrics', new THREE.InstancedBufferAttribute(new Float32Array(aMetrics), 3, false));
-    instanced.setAttribute('aColor', new THREE.InstancedBufferAttribute(new Float32Array(aColor), 3, false));
+    instanced.setAttribute(
+      'aOffset',
+      new THREE.InstancedBufferAttribute(new Float32Array(aOffset), 3, false)
+    );
+    instanced.setAttribute(
+      'aMetrics',
+      new THREE.InstancedBufferAttribute(new Float32Array(aMetrics), 3, false)
+    );
+    instanced.setAttribute(
+      'aColor',
+      new THREE.InstancedBufferAttribute(new Float32Array(aColor), 3, false)
+    );
 
     const material = new THREE.ShaderMaterial({
       fragmentShader: carLightsFragment,
@@ -530,14 +565,18 @@ class CarLights {
           uFade: { value: this.fade }
         },
         this.webgl.fogUniforms,
-        (typeof this.options.distortion === 'object' ? this.options.distortion.uniforms : {}) || {}
+        (typeof this.options.distortion === 'object'
+          ? this.options.distortion.uniforms
+          : {}) || {}
       )
     });
 
     material.onBeforeCompile = shader => {
       shader.vertexShader = shader.vertexShader.replace(
         '#include <getDistortion_vertex>',
-        typeof this.options.distortion === 'object' ? this.options.distortion.getDistortion : ''
+        typeof this.options.distortion === 'object'
+          ? this.options.distortion.getDistortion
+          : ''
       );
     };
 
@@ -616,7 +655,9 @@ class LightsSticks {
   init() {
     const options = this.options;
     const geometry = new THREE.PlaneGeometry(1, 1);
-    const instanced = new THREE.InstancedBufferGeometry().copy(geometry as any) as THREE.InstancedBufferGeometry;
+    const instanced = new THREE.InstancedBufferGeometry().copy(
+      geometry as any
+    ) as THREE.InstancedBufferGeometry;
     const totalSticks = options.totalSideLightSticks;
     instanced.instanceCount = totalSticks;
 
@@ -646,9 +687,18 @@ class LightsSticks {
       aMetrics.push(height);
     }
 
-    instanced.setAttribute('aOffset', new THREE.InstancedBufferAttribute(new Float32Array(aOffset), 1, false));
-    instanced.setAttribute('aColor', new THREE.InstancedBufferAttribute(new Float32Array(aColor), 3, false));
-    instanced.setAttribute('aMetrics', new THREE.InstancedBufferAttribute(new Float32Array(aMetrics), 2, false));
+    instanced.setAttribute(
+      'aOffset',
+      new THREE.InstancedBufferAttribute(new Float32Array(aOffset), 1, false)
+    );
+    instanced.setAttribute(
+      'aColor',
+      new THREE.InstancedBufferAttribute(new Float32Array(aColor), 3, false)
+    );
+    instanced.setAttribute(
+      'aMetrics',
+      new THREE.InstancedBufferAttribute(new Float32Array(aMetrics), 2, false)
+    );
 
     const material = new THREE.ShaderMaterial({
       fragmentShader: sideSticksFragment,
@@ -660,14 +710,18 @@ class LightsSticks {
           uTime: { value: 0 }
         },
         this.webgl.fogUniforms,
-        (typeof options.distortion === 'object' ? options.distortion.uniforms : {}) || {}
+        (typeof options.distortion === 'object'
+          ? options.distortion.uniforms
+          : {}) || {}
       )
     });
 
     material.onBeforeCompile = shader => {
       shader.vertexShader = shader.vertexShader.replace(
         '#include <getDistortion_vertex>',
-        typeof this.options.distortion === 'object' ? this.options.distortion.getDistortion : ''
+        typeof this.options.distortion === 'object'
+          ? this.options.distortion.getDistortion
+          : ''
       );
     };
 
@@ -750,7 +804,7 @@ class Road {
     this.uTime = { value: 0 };
   }
 
-  createPlane(side: number, width: number, isRoad: boolean) {
+  createPlane(side: number, _: number, isRoad: boolean) {
     const options = this.options;
     const segments = 100;
     const geometry = new THREE.PlaneGeometry(
@@ -763,7 +817,9 @@ class Road {
     let uniforms: Record<string, { value: any }> = {
       uTravelLength: { value: options.length },
       uColor: {
-        value: new THREE.Color(isRoad ? options.colors.roadColor : options.colors.islandColor)
+        value: new THREE.Color(
+          isRoad ? options.colors.roadColor : options.colors.islandColor
+        )
       },
       uTime: this.uTime
     };
@@ -796,21 +852,26 @@ class Road {
       uniforms: Object.assign(
         uniforms,
         this.webgl.fogUniforms,
-        (typeof options.distortion === 'object' ? options.distortion.uniforms : {}) || {}
+        (typeof options.distortion === 'object'
+          ? options.distortion.uniforms
+          : {}) || {}
       )
     });
 
     material.onBeforeCompile = shader => {
       shader.vertexShader = shader.vertexShader.replace(
         '#include <getDistortion_vertex>',
-        typeof this.options.distortion === 'object' ? this.options.distortion.getDistortion : ''
+        typeof this.options.distortion === 'object'
+          ? this.options.distortion.getDistortion
+          : ''
       );
     };
 
     const mesh = new THREE.Mesh(geometry, material);
     mesh.rotation.x = -Math.PI / 2;
     mesh.position.z = -options.length / 2;
-    mesh.position.x += (this.options.islandWidth / 2 + options.roadWidth / 2) * side;
+    mesh.position.x +=
+      (this.options.islandWidth / 2 + options.roadWidth / 2) * side;
 
     this.webgl.scene.add(mesh);
     return mesh;
@@ -957,7 +1018,12 @@ class App {
     this.composer = new EffectComposer(this.renderer);
     container.appendChild(this.renderer.domElement);
 
-    this.camera = new THREE.PerspectiveCamera(options.fov, container.offsetWidth / container.offsetHeight, 0.1, 10000);
+    this.camera = new THREE.PerspectiveCamera(
+      options.fov,
+      container.offsetWidth / container.offsetHeight,
+      0.1,
+      10000
+    );
     this.camera.position.z = -5;
     this.camera.position.y = 8;
     this.camera.position.x = 0;
@@ -965,7 +1031,11 @@ class App {
     this.scene = new THREE.Scene();
     this.scene.background = null;
 
-    const fog = new THREE.Fog(options.colors.background, options.length * 0.2, options.length * 500);
+    const fog = new THREE.Fog(
+      options.colors.background,
+      options.length * 0.2,
+      options.length * 500
+    );
     this.scene.fog = fog;
 
     this.fogUniforms = {
@@ -1081,21 +1151,33 @@ class App {
     const options = this.options;
     this.road.init();
     this.leftCarLights.init();
-    this.leftCarLights.mesh.position.setX(-options.roadWidth / 2 - options.islandWidth / 2);
+    this.leftCarLights.mesh.position.setX(
+      -options.roadWidth / 2 - options.islandWidth / 2
+    );
 
     this.rightCarLights.init();
-    this.rightCarLights.mesh.position.setX(options.roadWidth / 2 + options.islandWidth / 2);
+    this.rightCarLights.mesh.position.setX(
+      options.roadWidth / 2 + options.islandWidth / 2
+    );
 
     this.leftSticks.init();
-    this.leftSticks.mesh.position.setX(-(options.roadWidth + options.islandWidth / 2));
+    this.leftSticks.mesh.position.setX(
+      -(options.roadWidth + options.islandWidth / 2)
+    );
 
     this.container.addEventListener('mousedown', this.onMouseDown);
     this.container.addEventListener('mouseup', this.onMouseUp);
     this.container.addEventListener('mouseout', this.onMouseUp);
 
-    this.container.addEventListener('touchstart', this.onTouchStart, { passive: true });
-    this.container.addEventListener('touchend', this.onTouchEnd, { passive: true });
-    this.container.addEventListener('touchcancel', this.onTouchEnd, { passive: true });
+    this.container.addEventListener('touchstart', this.onTouchStart, {
+      passive: true
+    });
+    this.container.addEventListener('touchend', this.onTouchEnd, {
+      passive: true
+    });
+    this.container.addEventListener('touchcancel', this.onTouchEnd, {
+      passive: true
+    });
     this.container.addEventListener('contextmenu', this.onContextMenu);
 
     this.tick();
@@ -1131,7 +1213,12 @@ class App {
 
   update(delta: number) {
     const lerpPercentage = Math.exp(-(-60 * Math.log2(1 - 0.1)) * delta);
-    this.speedUp += lerp(this.speedUp, this.speedUpTarget, lerpPercentage, 0.00001);
+    this.speedUp += lerp(
+      this.speedUp,
+      this.speedUpTarget,
+      lerpPercentage,
+      0.00001
+    );
     this.timeOffset += this.speedUp * delta;
     const time = this.clock.elapsedTime + this.timeOffset;
 
@@ -1147,7 +1234,10 @@ class App {
       updateCamera = true;
     }
 
-    if (typeof this.options.distortion === 'object' && this.options.distortion.getJS) {
+    if (
+      typeof this.options.distortion === 'object' &&
+      this.options.distortion.getJS
+    ) {
       const distortion = this.options.distortion.getJS(0.025, time);
       this.camera.lookAt(
         new THREE.Vector3(
@@ -1250,7 +1340,7 @@ const Hyperspeed: FC<HyperspeedProps> = ({ effectOptions = {} }) => {
     };
   }, [mergedOptions]);
 
-  return <div id="lights" ref={hyperspeed}></div>;
+  return <div id='lights' ref={hyperspeed}></div>;
 };
 
 export default Hyperspeed;
